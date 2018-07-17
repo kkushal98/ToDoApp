@@ -21,11 +21,5 @@ app.controller('todocontrol', function($scope) {
         });    $scope.todoLista=List;
         };
 });
-// 	$scope.todoList=[]};
 
-// 	$scope.todoAdd=function(){
-// 	$scope.todoList=[{todoTask:$scope.todoTask,description:$scope.description}]
-// 	$scope.todoTask="";
-// 	};
-// });
 
