@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="todo" ng-controller="todocontrol">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  
+<script src="todo.js"></script>
+<link rel="stylesheet" href="todo.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<title> To Do App</title>
+</head>
+<body>
+<ul>
+  
+  <li><a href="todo.html">Home</a></li>
+</ul>  
+
+<h1 id="header"> To Do App </h1>
+
+<form id="ToDoForm" ng-submit=todoAdd()>
+  <p id="Action"> Add a todo </p>
+<div id="task">
+<label id="Tasklabel" for="Task"> Task </label>
+
+<input type="text" id="Task" ng-model="todoTask" placeholder="Task" required ">
+</div>
+<br>  
+ 
+ <label for="Description">  Description </label>
+  
+<div id="text">
+<textarea rows=10 cols=50 ng-model="description" id="Description">
+  Description</textarea>
+</div>
+<br>
+<div id="submit">
+<button  ng-click="check()" id="submit button"> Submit </button>
+<h1> </h1>
+</div>  
+
+
+</form>
+
+<br>
+
+<!-- <table ng-repeat="x in todoLista">
+	<td> <span ng-bind="x.todoText"></span> </td>
+</table> -->
+<!--     <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+
+<table> -->
+
+<h1 id="headertodo"> To Do List </h1>
+<table align="center" id="todo">
+<tr>
+<th id="TaskNumber"> S.No </th>
+<th> Task </th>
+<th> Description </th>
+</tr>
+<!-- <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span> -->
+<tr ng-repeat="x in todoLista">
+<td> <input type="checkbox"  ng-model="x.done"></td>
+<td > {{x.todoText}}</td>
+<td> {{x.description}}</td>
+
+</tr>
+<table>
+<p id="removep">
+<button id="remove" ng-click="remove()"> Remove </button> <p>
+
+
+
+</body>
